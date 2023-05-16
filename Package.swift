@@ -18,11 +18,6 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(
-            name: "EpsonPrint",
-            dependencies: []),
-        .testTarget(
-            name: "EpsonPrintTests",
-            dependencies: ["EpsonPrint"]),
+        .binaryTarget(name: "EpsonPrint", url: "https://flippos.s3.us-west-1.amazonaws.com/public/libepos2.xcframework.zip", checksum: "c95fe6252b37dbb8a5e91df3fe5fc98771ffa9c60f13fa944579098f728c9bfa")
     ]
 )
